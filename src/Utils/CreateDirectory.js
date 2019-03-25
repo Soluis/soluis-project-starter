@@ -1,6 +1,7 @@
-import mkdirp from 'mkdirp';
-import { DEFAULT_WORKFLOW, DEFAULT_FOLDERS } from '../config';
-const { execFile } = require('child_process');
+import mkdirp from 'mkdirp'
+import { DEFAULT_WORKFLOW, DEFAULT_FOLDERS } from '../config'
+import { createGitFiles } from './CreateGitFiles'
+const { execFile } = require('child_process')
 
 export function createDirectory(projectTags, projectName, projectLocation) {
 
@@ -44,6 +45,7 @@ export function createDirectory(projectTags, projectName, projectLocation) {
       if (error) {
         throw error;
       }
+      createGitFiles(projectDirectory)
     });
 
   }
