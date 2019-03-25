@@ -7,7 +7,8 @@ export const DEFAULT_WORKFLOW = [
 export const DEFAULT_TAGS = [
   'Phone',
   'Tablet',
-  'Desktop'
+  'VR',
+  'MR'
 ];
 
 export const DEFAULT_FOLDERS = [
